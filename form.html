@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="styling_form.css">
+</head>
+<body>
+    <h1 class="h1">Product Add</h1>
+    <form action="product_list.php" method="POST" id="product_form">
+        <label for="sku" class="label">SKU:</label>
+        <input type="text" id="sku" name="sku" placeholder="Product's SKU" required>
+        
+        <label for="name" class="label">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="price" class="label">Price ($):</label>
+        <input type="text" id="price" name="price" placeholder="Price in $" required>
+        
+        <label for="productType" class="label">Type Switcher:</label>
+        <select id="productType" name="productType" required>
+            <option disabled selected>Choose Type</option>
+            <option value="DVD">DVD</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Book">Book</option>
+        </select>
+        
+        <div id="DVD" class="productTypeSection">
+            <label for="size" class="label">Size (MB):</label>
+            <input type="text" id="size" name="size">
+        </div>
+        
+        <div id="Furniture" class="productTypeSection">
+            <label for="height" class="label">Height (CM):</label>
+            <input type="text" id="height" name="height">
+            
+            <label for="width" class="label">Width (CM):</label>
+            <input type="text" id="width" name="width">
+            
+            <label for="length" class="label">Length (CM):</label>
+            <input type="text" id="length" name="length">
+        </div>
+        
+        <div id="Book" class="productTypeSection">
+            <label for="weight" class="label">Weight (KG):</label>
+            <input type="text" id="weight" name="weight">
+        </div>
+        
+        <label for="description">Kindly choose your product type</label>
+        
+        <input type="submit" value="Save" name="save" class="save">
+        <button type="button" onclick="window.location.href='index.php'" class="cancel">Cancel</button>
+    </form>
+    <script src="form_handling.js"></script>
+</body>
+</html>
